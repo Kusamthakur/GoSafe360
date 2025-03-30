@@ -16,15 +16,16 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    
 
     photo: {
       type: String,
     },
 
+
     role: {
       type: String,
-      enum:['user' , "admin"],
-      default: "user"
+      enum:['user' , "admin" ],
     },
   },
   { timestamps: true }

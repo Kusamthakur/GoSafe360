@@ -32,6 +32,7 @@ const bookingSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    
     updatedAt: {
       type: Date,
       default: Date.now,

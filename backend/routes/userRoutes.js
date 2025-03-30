@@ -1,5 +1,6 @@
 import express from 'express';
 import {
+  getAllGuides,
   getAllUsers,
   getSingleUser,
   updateUser,
@@ -10,8 +11,11 @@ import { verifyAdmin, verifyToken, verifyUser } from '../middleware/authMiddlewa
 
 const router = express.Router();
 
+
+
 // Get all users
 router.get('/users', verifyToken, verifyAdmin, getAllUsers);
+
 
 // Get a single user by ID
 router.get('/users/:id', verifyToken, verifyUser, getSingleUser);

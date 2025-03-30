@@ -26,6 +26,22 @@ const getSingleUser = async (req, res) => {
   }
 };
 
+const getAllGuides = async (req, res) => {
+  try {
+    const guides = await User.find({ role: 'guide' });
+
+    if (!guides.length) {
+      return res.status(404).json({ message: 'No guides found' });
+    }
+
+    res.status(200).json({ data: guides });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal Server Error' });
+  }
+};
+
+
 const updateUser = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -60,4 +76,4 @@ const deleteUser = async (req, res) => {
   }
 };
 
-export { getAllUsers, getSingleUser, updateUser, deleteUser };
+export { getAllGuides, getAllUsers, getSingleUser, updateUser, deleteUser };

@@ -7,6 +7,7 @@ import Tours from '../pages/Tours'
 import TourDetails from '../pages/TourDetails'
 import SearchResultList from '../pages/SearchResultList'
 import About from '../pages/About'
+import Map from '../pages/Map.jsx'
 import Contact from '../pages/Contact'
 import Booked from '../pages/Booked'
 import MyAccount from '../Dashboard/UserAccount/MyAccount'
@@ -30,6 +31,7 @@ const Router = () => {
         <Route path='/tours' element={<Tours />} />
         <Route path='/tours/:id' element={<TourDetails />} />
         <Route path='/about' element={<About />} />
+        <Route path='/Map' element={<Map />} />
         <Route path='/booked' element={<Booked />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/tours/search' element={<SearchResultList />} />
